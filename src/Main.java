@@ -69,6 +69,14 @@ public class Main {
 							// verificação de mensagem enviada com sucesso
 							System.out.println("Resposta Oi Enviada? " + sendResponse.isOk());
 							break;
+						case "ILA":
+							// envio da mensagem de resposta
+							sendResponse = bot.execute(new SendMessage(update.message().chat().id(),
+									"ILA \n "
+									+ "Instituto de Logística da Aeronáutica"));
+							// verificação de mensagem enviada com sucesso
+							System.out.println("ILA: " + sendResponse.isOk());
+							break;
 						case "obrigado":
 							// envio da mensagem de resposta
 							sendResponse = bot.execute(new SendMessage(update.message().chat().id(),
@@ -85,7 +93,7 @@ public class Main {
 							"Desde já agradeço sua atenção :+1: \n"+
 							"Se após nossa conversa ainda restar dúvidas, ligue: (11)2465-2007!"));
 							// verificação de mensagem enviada com sucesso
-							System.out.println("Resposta Tchal Enviada? " + sendResponse.isOk());
+							System.out.println("Start: " + sendResponse.isOk());
 							break;
 						default:
 							// envio da mensagem de resposta
